@@ -1,4 +1,3 @@
-;make it serch every (Time) it stops the KMPlayer 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
@@ -7,26 +6,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; you can Stop it fast if you are useing Scite for ahk  under the tool bar Press Replace and replace the Send {Space} 
 ; with  ;Send {Space}  or just delete it if you want 
 
-
-
-
-
-
-
-
-;make it make sure that STPD is chosen before we start the trade
-;and make it make sure that the cam is set in AryaStarks 
-;make it stop MBOT when find Hotan
-;and make it click walk after every time it clicks run 
-;and make it make sure that clinte\login is chosen before image serch the 3erd Bridg
-;and set a delay after the first bridg DW
-;make it do space in the Hottan  short script 
-;and set a big delay after hotan mbot start traning 5 min for a star t
-;make it press Space and alt tab after the  first and the second bridg
-;and set a big delay after hotan TP
-;after the 3erd bridg add a Space 
-;open to fix it later pic and fix it 
-;and fix the sbot jg AFTER bridg Error
 
 ^Space::
 
