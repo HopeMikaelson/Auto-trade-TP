@@ -1,7 +1,7 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-; STPD is what the Short Script i made useing Mbot Called ### Dont forget to change where the Click is 
+; STPD is what the Script i made useing Mbot Called for samar to hotan trade ### Dont forget to change where the Click is 
 ; all the Spaces are made for me cuz i watch some series or Anime or movies when i'm useing the script 
 ; you can Stop it fast if you are useing Scite for ahk  under the tool bar Press Replace and replace the Send {Space} 
 ; with  ;Send {Space}  or just delete it if you want 
