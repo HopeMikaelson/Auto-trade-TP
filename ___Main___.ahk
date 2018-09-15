@@ -2,30 +2,6 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-;make it make sure that STPD is chosen before we start the trade
-;and make it make sure that the cam is set in AryaStarks 
-;make it stop MBOT when find Hotan
-;and make it click walk after every time it clicks run 
-;and make it make sure that clinte\login is chosen before image serch the 3erd Bridg
-;and set a delay after the first bridg DW
-;make it do space in the Hottan  short script 
-;and set a big delay after hotan mbot start traning 5 min for a star t
-;make it press Space and alt tab after the  first and the second bridg
-;and set a big delay after hotan TP
-;after the 3erd bridg add a Space 
-;open to fix it later pic and fix it 
-;and fix the sbot jg AFTER bridg Error
-;more save s
-;space after 3b 
-;Fix the 3erd Bridg Error
-;JG 6030  ,  1103
-;Hotan 255  ,  123
-;40 sec more ddely after first bridg
-;Delet the thired Tab after the Hotan TP
-
-;Make  the Chose Sbot Click not Send  
-
-
 ^Space::
 Kamii =
 
