@@ -3,13 +3,7 @@
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ^Space::
-Kamii =
 
-WinGet,KamID,PID, A
-Kamii := KamID
-WinActivate, [AryaStarks] SBotP v1.0.38 (C)2008-2015 by bot-cave.net, Public - SBotP v1.0.
-Sleep 5000
-WinActivate, ahk_pid %Kamii%
 Sleep 300
 WinWait, [AryaStarks] SBotP v1.0.38 (C)2008-2015 by bot-cave.net, Public - SBotP v1.0.
 IfWinNotActive, [AryaStarks] SBotP v1.0.38 (C)2008-2015 by bot-cave.net, Public - SBotP v1.0., 
@@ -48,17 +42,6 @@ Click 636, 406 ; Clicks 3erd Persons View
 Sleep 300
 Click 568, 705 ; Clicks Confirm
 Sleep 300
-WinActivate, ahk_pid %Kamii%
-Sleep 300
-Click 956, 903 ; Clicks Menu
-Sleep 300
-Click 954, 877 ; Clicks System (Esc)
-Sleep 300
-Click 637, 446 ; Clicks Options
-Sleep 300
-Click 636, 406 ; Clicks 3erd Persons View
-Sleep 300
-Click 568, 705 ; Clicks Confirm
 Sleep 300
 WinWait, MyQueen1 [SRO_Client], 
 IfWinNotActive, MyQueen1 [SRO_Client], , WinActivate, MyQueen1 [SRO_Client], 
@@ -81,7 +64,7 @@ Sleep 300
 Click 750, 627 ; Clicks Start Traning
 Sleep 300
 Click 52, 45 ; Clicks on Clinte\Login in MBot
-Send, {ALTDOWN}{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}{ALTUP}
+Send, {ALTDOWN}{TAB}{TAB}{TAB}{TAB}{ALTUP}
 Send {Space}
 Sleep 1000000
 Loop {
