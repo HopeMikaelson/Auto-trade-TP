@@ -1,5 +1,60 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+
+
+;=================SamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamar
+;telport(STP, STPW, SX1, SY1, SX2, SY2, After_Samar_TP, Last_Delay_Befor_break, First_Else_Delay)
+;= ===============SamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamar
+STP = STPD.png
+STPW = STPDW.png
+SX1 = 175
+SY1 = 423
+SX2 = 199
+SY2 = 460
+After_Samar_TP = WK_TP.png
+Last_Delay_Befor_break = 1260000
+First_Else_Delay = 40000
+;=================SamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamar
+;=================HotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotan
+;telport(HTP, HTPW, HX1, HY1, HX2, HY2, AHTP, First_Big_Delay, Else_Delay)
+;=================HotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotan
+HTP = HotanTP.png
+HTPW = HotanTPW.png
+HX1 = 176
+HY1 = 441
+HX2 = 202
+HY2 = 441
+AHTP = Hotan_After_TP.png
+First_Big_Delay = 260000
+Else_Delay = 20000
+;=================HotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotan
+;=================DWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDW
+;telport(DTP, DTPW, DX1, DY1, DX2, DY2, ADTP, Last_BIG_Delay, Else__Delay)
+;=================DWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDW
+DTP = DWTP.png
+DTPW = DWTPW.png
+DX1 = 175
+DY1 = 440
+DX2 = 238
+DY2 = 422
+ADTP = DW_After_TP.png
+Last_BIG_Delay = 800000
+Else__Delay = 20000
+;==================DWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDW
+
+
+
+
+
+
+
+
+
+
+
+
+
 ^Space::
 
 WinWait, [AryaStarks] SBotP v1.0.38 (C)2008-2015 by bot-cave.net, Public - SBotP v1.0.
@@ -62,9 +117,9 @@ Sleep 300
 Click 52, 45 ; Clicks on Clinte\Login in MBot
 Send, {ALTDOWN}{TAB}{TAB}{TAB}{TAB}{ALTUP}
 Send {Space}
-Sleep 1000000
+Sleep 1000000 ; >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>...........Samar Teleport.........<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 Loop {
-	SamarTP()
+	telport(STP, STPW, SX1, SY1, SX2, SY2, After_Samar_TP, Last_Delay_Befor_break, First_Else_Delay)
 	Loop {	;============================================================= Makes SBot Stops OR Starts Tracing With " Hotan Small Script "
 		Send {Space} ; stop what ever i was doing ## Dont Forget To Modfy It later ##
 		WinWait, SRO_Client, 
@@ -179,8 +234,8 @@ Loop {
 			Send, {ALTDOWN}{TAB}{TAB}{TAB}{ALTUP}
 			Sleep 150
 			Send {Space}
-			Sleep 470000
-			HotanTP()
+			Sleep 470000 ; >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>................. Hotan Teleport ......................<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+			telport(HTP, HTPW, HX1, HY1, HX2, HY2, AHTP, First_Big_Delay, Else_Delay)
 			; =============================================== The Start OF DW Bridg The First Bridg (B1) and The 3erd Bridg (B3)
 			Loop {
 				Send {Space} ; stop what ever i was doing ## Dont Forget To Modfy It later ##
@@ -339,8 +394,8 @@ Loop {
 													RightClick 807, 925 ; Clicks walk in MyQueen1
 													Send, {ALTDOWN}{TAB}{TAB}{TAB}{ALTUP}
 													Send {Space}
-													Sleep 900000
-													DWTP()
+													Sleep 900000 ; >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>...................DW Teleport ...............<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+													telport(DTP, DTPW, DX1, DY1, DX2, DY2, ADTP, Last_BIG_Delay, Else__Delay)
 													Loop {
 														Send {Space} ; stop what ever i was doing ## Dont Forget To Modfy It later ##
 														WinWait, SRO_Client, 
@@ -673,7 +728,45 @@ Loop {
 	}
 	break
 }
-
+;=================SamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamar
+telport(STP, STPW, SX1, SY1, SX2, SY2, After_Samar_TP, Last_Delay_Befor_break, First_Else_Delay)
+;= ===============SamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamar
+STP = STPD.png
+STPW = STPDW.png
+SX1 = 175 ; First Click
+SY1 = 423 ; First Click                                       ##### SAMAR ########### Samar #######
+SX2 = 199 ; Second Click
+SY2 = 460 ; Second Click
+After_Samar_TP = WK_TP.png
+Last_Delay_Befor_break = 1260000
+First_Else_Delay = 40000
+;=================SamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamar
+;=================HotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotan
+telport(HTP, HTPW, HX1, HY1, HX2, HY2, AHTP, First_Big_Delay, Else_Delay)
+;=================HotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotan
+HTP = HotanTP.png
+HTPW = HotanTPW.png
+HX1 = 176
+HY1 = 441 					
+HX2 = 202
+HY2 = 441 
+AHTP = Hotan_After_TP.png
+First_Big_Delay = 260000
+Else_Delay = 20000
+;=================HotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotanHotan
+;=================DWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDW
+telport(DTP, DTPW, DX1, DY1, DX2, DY2, ADTP, Last_BIG_Delay, Else_Delay)
+;=================DWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDW
+DTP = DWTP.png
+DTPW = DWTPW.png
+DX1 = 175
+DY1 = 440
+DX2 = 238
+DY2 = 422
+ADTP = DW_After_TP.png
+Last_BIG_Delay = 800000
+Else__Delay = 20000
+;==================DWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDW
 
 
 
@@ -682,11 +775,109 @@ F1:: Reload
 Esc:: ExitApp
 
 
+telport(A, B, x1, y1, x2, y2, C, T, D)
+{
+	Loop{
+		Send {Space}
+		WinWait, SRO_Client, 
+		IfWinNotActive, SRO_Client, , WinActivate, SRO_Client, 
+		WinWaitActive, SRO_Client,
+		ImageSearch, x, y, 1141, 0, 1274, 44, *30 %A%
+		If (ErrorLevel=0)
+		{
+			PixelSearch, X, Y, 140, 0, 1153, 960, 0xFFD09E, 1, Fast ;X, Y, 215, 3, 1033, 392, 0xFFD09E, 5, Fast
+			If (ErrorLevel=0)
+			{
+				MouseMove X+30, Y+30
+				Click
+				Sleep 500
+				ImageSearch, x, y, 125, 258, 406, 288, *30 %B%
+				If (ErrorLevel=0)
+				{
+					Sleep 500
+					Click %x1%, %y1%
+					Sleep 500	
+					Click %x2%, %y2%
+					Sleep 3000
+					Loop {
+						WinWait, MyQueen1 [SRO_Client], 
+						IfWinNotActive, MyQueen1 [SRO_Client], , WinActivate, MyQueen1 [SRO_Client], 
+						WinWaitActive, MyQueen1 [SRO_Client],
+						ImageSearch, x, y, 1141, 0, 1274, 44, *30 %C%
+						If (ErrorLevel=0)
+							break
+						}
+					Sleep 600
+					Click 1133, 26 ; Clicks ON the Trade pet After TP 
+					Sleep 400
+					Click Right 848, 883 ; DisMounts the Trade Pet
+					Sleep 400
+					Click 1262, 58 ; Clicks On the Map Under The mini Map
+					Sleep 400
+					Click 927, 287 ; Minmize the Map
+					Sleep 400
+					MouseClickDrag, L, 444, 288, 1144, 190 ; Move the Map
+					Sleep 400
+					Click 1255, 226 ; Clicks On the Map Auto Move To Reset It 
+					Sleep 400
+					Click 1255, 226 ; Makes the Map Auto Move 
+					Sleep 400
+					RightClick 807, 925 ; Clicks walk in MyQueen1
+					WinWait, SRO_Client, 
+					IfWinNotActive, SRO_Client, , WinActivate, SRO_Client, 
+					WinWaitActive, SRO_Client,
+					Sleep 500
+					Click 1133, 26 ; Clicks ON the Trade pet After TP
+					Sleep 500
+					Click Right 848, 883 ; DisMounts the Trade Pet
+					Sleep 400
+					Click 1262, 58 ; Clicks On the Map Under The mini Map
+					Sleep 400
+					Click 927, 287 ; Minmize the Map
+					Sleep 400
+					MouseClickDrag, L, 444, 288, 1144, 190 ; Move the Map
+					Sleep 400
+					Click 1255, 226 ; Clicks On the Map Auto Move To Reset It 
+					Sleep 400
+					Click 1255, 226 ; Makes the Map Auto Move 
+					Send, {ALTDOWN}{TAB}{TAB}{ALTUP}
+					Sleep 150
+					Send {Space}
+					Sleep %T%
+					break
+				}
+				else
+				{
+					;If (ErrorLevel=1)
+					Send, {ALTDOWN}{TAB}{ALTUP}
+					Sleep 50
+					Send {Space}
+					Sleep 5000
+				}
+			}
+			else
+			{
+				;If (ErrorLevel=1)
+				Send, {ALTDOWN}{TAB}{ALTUP}
+				Sleep 150
+				Send {Space}
+				Sleep 10000
+			}
+		}					
+		else					
+		{					
+			;If (ErrorLevel=1)
+			Send, {ALTDOWN}{TAB}{ALTUP}
+			Sleep 150
+			Send {Space}
+			Sleep %D%
+		}
+	}
+}
 
 
 
-
-
+/*
 
 
 
@@ -712,7 +903,7 @@ SamarTP()
 				If (ErrorLevel=0)
 				{
 					Sleep 500
-					Click 175, 423
+					Click 175, 423 ; see if you can do it after the command VAR
 					Sleep 500	
 					Click 199, 460
 					Sleep 3000
@@ -1002,7 +1193,7 @@ DWTP()
 
 
 
-
+*/
 
 
 
