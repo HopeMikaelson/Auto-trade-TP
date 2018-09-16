@@ -728,6 +728,17 @@ Loop {
 	}
 	break
 }
+ExitApp
+
+
+F1:: Reload
+
+
+Esc:: ExitApp
+
+
+
+/*
 ;=================SamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamar
 telport(STP, STPW, SX1, SY1, SX2, SY2, After_Samar_TP, Last_Delay_Befor_break, First_Else_Delay)
 ;= ===============SamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamarSamar
@@ -769,10 +780,8 @@ Else__Delay = 20000
 ;==================DWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDWDW
 
 
+*/
 
-
-F1:: Reload
-Esc:: ExitApp
 
 
 telport(A, B, x1, y1, x2, y2, C, T, D)
